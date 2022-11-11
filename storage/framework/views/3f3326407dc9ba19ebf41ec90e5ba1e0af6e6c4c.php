@@ -9,13 +9,13 @@
                 <div class="panel-heading">Info Siswa</div>
                 <div class="panel-body">
 
-                    <div> Nama : <?php echo e($name); ?></div>
-                    <div> Score : <?php echo e($score); ?></div>
-                    <?php if($score <= 50): ?>
+                    <div> Nama : <?php echo e($q->name); ?></div>
+                    <div> Score : <?php echo e($q->score); ?></div>
+                    <?php if($q->score <= 50): ?>
                         <div class="alert alert-danger d-inline-block">
                             Maaf, Nilai anda tidak cukup
                         </div>
-                    <?php elseif(($score > 51) and ($score <=60)): ?>
+                    <?php elseif(($q->score > 51) and ($q->score <=60)): ?>
                     <div class="alert alert-warning d-inline-block">
                         Nilai kamu kurang sedikit
                     </div>

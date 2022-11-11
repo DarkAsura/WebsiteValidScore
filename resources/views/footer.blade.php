@@ -1,3 +1,3 @@
-<div class="footer">
+<div>
     Web Programming Project Created By Ignatius Alexander Hery
 </div>

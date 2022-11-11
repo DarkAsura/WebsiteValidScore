@@ -11,13 +11,13 @@
                 <div class="panel-heading">Info Siswa</div>
                 <div class="panel-body">
 
-                    <div> Nama : {{$name}}</div>
-                    <div> Score : {{$score}}</div>
-                    @if($score <= 50)
+                    <div> Nama : {{$q->name}}</div>
+                    <div> Score : {{$q->score}}</div>
+                    @if($q->score <= 50)
                         <div class="alert alert-danger d-inline-block">
                             Maaf, Nilai anda tidak cukup
                         </div>
-                    @elseif(($score > 51) and ($score <=60))
+                    @elseif(($q->score > 51) and ($q->score <=60))
                     <div class="alert alert-warning d-inline-block">
                         Nilai kamu kurang sedikit
                     </div>

@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use \View as View;
 /*
@@ -13,21 +13,6 @@ use \View as View;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::post("users", function (\Illuminate\Http\Request $request){
-$nama = $request->name;
-$score = $request->score;
-
-return View('view')
-    ->with('name',$nama)
-    ->with('score',$score);
-});
-
-
-
-
-
-
+Route::get('/', [StudentController::class,'home']);
+Route::post('/insert',[StudentController::class,'store']);
+Route::get('/list',[StudentController::class,'index']);
