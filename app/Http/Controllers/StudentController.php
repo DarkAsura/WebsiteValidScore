@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -52,7 +53,8 @@ class StudentController extends Controller
         }
 
         $validator = $validator->validated();
-        DB::table('students')->insert([
+
+        student::create([
             'name' => $validator['name'],
             'score' => $validator['score']
         ]);
